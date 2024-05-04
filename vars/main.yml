@@ -1,0 +1,5 @@
+postgresql_databases:
+  - name: raxdemo_db
+postgresql_users:
+  - name: raxdemo_user
+    password: 4S1r1usXM!
