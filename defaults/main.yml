@@ -40,7 +40,7 @@ postgresql_locales:
 
 # Databases to ensure exist.
 postgresql_databases:
- - name: "{{ instance['customOptions']['db_name'] }}" # required; the rest are optional
+ - name: "{{ morpheus['customOptions']['PostgreSqlDatabaseName'] }}" # required; the rest are optional
 #   lc_collate: # defaults to 'en_US.UTF-8'
 #   lc_ctype: # defaults to 'en_US.UTF-8'
 #   encoding: # defaults to 'UTF-8'
@@ -55,8 +55,8 @@ postgresql_databases:
 
 # Users to ensure exist.
 postgresql_users:
- - name: "{{ instance['customOptions']['db_username'] }}" #required; the rest are optional
-   password: "{{ instance['customOptions']['db_username_pass'] }}" # defaults to not set
+ - name: "{{ morpheus['customOptions']['PostgreSqlUserName'] }}" #required; the rest are optional
+   password: "{{ morpheus['customOptions']['PostgreSqlUserPassword'] }}" # defaults to not set
 #   encrypted: # defaults to not set
 #   priv: # defaults to not set
 #   role_attr_flags: # defaults to not set
